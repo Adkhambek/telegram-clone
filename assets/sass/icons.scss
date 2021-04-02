@@ -4,6 +4,7 @@ $general: '../images/icons/General_2x.png';
 $iconset: '../images/icons/IconsetW_2x.png';
 $photoicons: '../images/icons/PhotoIcons_2x.png';
 $profileicons: '../images/icons/ProfileIcons_2x.png';
+$major: '../images/icons/Major_2x.png';
 
 @mixin sptire($url, $x, $y){
     background-image: url($url);
@@ -185,6 +186,42 @@ $profileicons: '../images/icons/ProfileIcons_2x.png';
     @include sptire($general, -26px, -1783px);
     width: 28px;
 	height: 28px;
+}
+
+.icon-arrow-up{
+    @include sptire($major, -10px, -68px);
+    width: 28px;
+	height: 16px;
+}
+
+.icon-arrow-down{
+    @include sptire($major, -10px, -104px);
+    width: 28px;
+	height: 16px;  
+}
+
+.icon-keyboard{
+    @include sptire($profileicons, -20px, -280px);
+    width: 40px;
+	height: 28px;
+}
+
+.icon-menu-dark{
+    @include sptire($profileicons, -22px, -136px);
+    width: 36px;
+	height: 24px;
+}
+
+.icon-twitter{
+    @include sptire($profileicons, -14px, -560px);
+    width: 54px;
+	height: 44px;
+}
+
+.icon-twitter-outline{
+    @include sptire($profileicons, -14px, -624px);
+    width: 54px;
+	height: 44px;
 }
 
 
