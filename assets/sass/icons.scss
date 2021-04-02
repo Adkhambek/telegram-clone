@@ -1,9 +1,190 @@
+//http://www.spritecow.com/
 
-.sprite {
-	background-image: url('../images/icons/General_2x.png');
+$general: '../images/icons/General_2x.png';
+$iconset: '../images/icons/IconsetW_2x.png';
+$photoicons: '../images/icons/PhotoIcons_2x.png';
+$profileicons: '../images/icons/ProfileIcons_2x.png';
+
+@mixin sptire($url, $x, $y){
+    background-image: url($url);
+    background-position: $x $y;
+}
+.icon{
     background-repeat: no-repeat;
-    background-position: -20px -222px;
-    transform: scale(0.8);
+    transform: scale(0.7);
+    display: inline-block;
+    margin: 0;
+}
+.icon-new-group {
+    @include sptire($general, -20px, -222px);
 	width: 40px;
 	height: 28px;
 }
+
+.icon-contacts {
+    @include sptire($general, -22px, -270px);
+    width: 36px;
+	height: 36px;
+}
+
+.icon-settings {
+    @include sptire($general, -20px, -325px);
+    width: 40px;
+	height: 41px;
+}
+
+.icon-emoji{
+    @include sptire($general, -18px, -670px);
+    width: 44px;
+	height: 44px;
+}
+
+.icon-emoji-outline{
+    @include sptire($general, -18px, -734px);
+    width: 44px;
+	height: 44px;
+}
+.icon-faq{
+    @include sptire($general, -20px, -1274px);
+    width: 40px;
+	height: 40px;
+}
+
+.icon-menu{
+    @include sptire($general, -22px, -174px);
+    width: 36px;
+	height: 28px;
+}
+
+.icon-file-upload{
+    @include sptire($iconset, -23px, -137px);
+    width: 38px;
+	height: 44px;
+}
+
+.icon-file-upload-outline{
+    @include sptire($iconset, -23px, -201px);
+    width: 38px;
+	height: 44px;
+}
+
+.icon-close-sm{
+    @include sptire($iconset, -32px, -388px);
+    width: 20px;
+	height: 20px;
+}
+
+.icon-search{
+    @include sptire($iconset, -28px, -429px);
+    width: 29px;
+	height: 28px;
+}
+
+.icon-audio-record{
+    @include sptire($iconset, -25px, -570px);
+    width: 33px;
+	height: 42px;
+}
+
+.icon-audio-record-outline{
+    @include sptire($iconset, -25px, -1410px);
+    width: 33px;
+	height: 42px;
+}
+
+.icon-close-lg{
+    @include sptire($iconset, -30px, -640px);
+    width: 24px;
+	height: 24px;
+}
+
+.icon-send{
+    @include sptire($iconset, -22px, -1726px);
+    width: 49px;
+	height: 48px;
+}
+
+.icon-bar-white{
+    @include sptire($iconset, -38px, -2023px);
+    width: 8px;
+	height: 32px;
+}
+
+.icon-search-white{
+    @include sptire($iconset, -26px, -2075px);
+    width: 33px;
+	height: 33px;
+}
+
+.icon-close-white{
+    @include sptire($photoicons, -20px, -20px);
+    width: 40px;
+	height: 42px;
+}
+
+.icon-phone{
+    @include sptire($profileicons, -24px, -20px);
+    width: 36px;
+	height: 36px;
+}
+
+.icon-notification{
+    @include sptire($profileicons, -24px, -76px);
+    width: 36px;
+	height: 36px;
+}
+
+.icon-group-common{
+    @include sptire($profileicons, -24px, -180px);
+    width: 32px;
+	height: 32px;
+}
+
+.icon-send-area{
+    @include sptire($profileicons, -20px, -440px);
+    width: 40px;
+	height: 40px;
+}
+.icon-send-area-outline{
+    @include sptire($profileicons, -20px, -500px);
+    width: 40px;
+	height: 40px;
+}
+
+.icon-bio{
+    @include sptire($profileicons, -20px, -688px);
+    width: 40px;
+	height: 40px;
+}
+
+.icon-about{
+    @include sptire($general, -20px, -386px);
+    width: 40px;
+	height: 40px;
+}
+
+.icon-avatar{
+    @include sptire($general, -20px, -798px);
+    width: 40px;
+	height: 36px;
+}
+
+.icon-avatar-outline{
+    @include sptire($general, -20px, -854px);
+    width: 40px;
+	height: 36px;
+}
+
+.icon-eye{
+    @include sptire($general, -24px, -1700px);
+    width: 32px;
+	height: 22px;
+}
+
+.icon-pin{
+    @include sptire($general, -26px, -1783px);
+    width: 28px;
+	height: 28px;
+}
+
+
