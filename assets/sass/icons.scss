@@ -12,9 +12,9 @@ $major: '../images/icons/Major_2x.png';
 }
 .icon{
     background-repeat: no-repeat;
-    transform: scale(0.7);
+    transform: scale(0.6);
     display: inline-block;
-    margin: 0;
+    vertical-align: middle
 }
 .icon-new-group {
     @include sptire($general, -20px, -222px);

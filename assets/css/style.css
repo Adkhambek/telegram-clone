@@ -37,6 +37,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: inline-block;
+  width: 100%;
+}
+
 button {
   cursor: pointer;
   outline: none;
@@ -46,12 +51,13 @@ button {
 
 .telegram {
   width: 80%;
-  max-height: 70%;
+  height: 90vh;
+  overflow-y: hidden;
   background-color: #ffffff;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
 }
 
 .dialog__header {
@@ -66,15 +72,127 @@ button {
           align-items: center;
 }
 
+.dialog__header .icon-menu {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
 .dialog__brand {
-  font-size: 1.6rem;
-  margin-left: 2rem;
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
 }
 
 .dialog__body {
-  padding: .7rem 1.5rem;
+  padding: 0 1.5rem;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dialog__body::-webkit-scrollbar {
+  width: 3px;
+}
+
+.dialog__body::-webkit-scrollbar-track {
+  background: #F2F2F2;
+  /* color of the tracking area */
+}
+
+.dialog__body::-webkit-scrollbar-thumb {
+  background-color: #497799;
 }
 
 .dialog__search {
-  padding: .7rem 1.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1rem 0;
+  background-color: #ffffff;
+}
+
+.dialog__search .icon-search {
+  position: absolute;
+  left: 0.2rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.dialog__search-bar {
+  width: 100%;
+  border: none;
+  background-color: #F2F2F2;
+  outline: none;
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+.dialog__list .active {
+  background-color: #5d8db3;
+  color: #ffffff;
+}
+
+.dialog__list .active .sender {
+  color: #ffffff;
+}
+
+.dialog__list .active .fa-check {
+  color: #ffffff;
+}
+
+.dialog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.dialog__item:not(.active):hover {
+  background-color: #e7ebf0;
+}
+
+.dialog__avatar {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.dialog__user-name {
+  font-size: 1.4rem;
+}
+
+.dialog__message {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.dialog__message .sender {
+  color: #497799;
+  margin-right: 0.5rem;
+}
+
+.dialog__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin-left: auto;
+}
+
+.dialog__right .fa-check {
+  color: #1ea050;
+  margin-right: 0.5rem;
 }

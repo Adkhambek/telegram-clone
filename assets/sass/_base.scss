@@ -18,7 +18,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
 
 ul{
     list-style: none;
@@ -28,6 +28,11 @@ a{
     color: $blue;
     text-decoration: none;
 } 
+
+img{
+    display: inline-block;
+    width: 100%;
+}
 
 button{
     cursor: pointer;
