@@ -1,0 +1,21 @@
+.dialog{
+    &__header{
+        background-color: $blue;
+        color: $white;
+        padding: .7rem 1.5rem;
+        display: flex;
+        align-items: center;
+
+    }
+    &__brand{
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+    &__body{
+        padding: .7rem 1.5rem; 
+    }
+    &__search{
+        padding: .7rem 1.5rem;  
+    }
+}

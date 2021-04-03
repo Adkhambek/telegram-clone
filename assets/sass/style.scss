@@ -1,4 +1,7 @@
-*{
-    margin: 0;
-    
-}
+//main settings:
+@import 'variables';
+@import 'base';
+
+//sections:
+@import 'sections/telegram';
+@import 'sections/dealog';
