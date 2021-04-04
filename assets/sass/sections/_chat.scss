@@ -38,7 +38,9 @@
     }
 
     &__body{
-        background-color: lighten($blue 10%);
+        background-color: lighten($blue, 30%);
+        height: 100%;
         
     }
+    
 }

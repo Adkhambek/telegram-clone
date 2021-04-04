@@ -259,3 +259,7 @@ button {
   background-color: #416a88;
 }
 
+.chat__body {
+  background-color: #a6c1d5;
+  height: 100%;
+}
