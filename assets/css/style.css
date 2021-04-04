@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
   background-color: #e7ebf0;
   height: 100vh;
@@ -63,7 +63,8 @@ button {
 .dialog__header {
   background-color: #497799;
   color: #ffffff;
-  padding: .7rem 1.5rem;
+  padding: 0 1.5rem;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +131,7 @@ button {
 }
 
 .dialog__list .active {
-  background-color: #5d8db3;
+  background-color: #6191b4;
   color: #ffffff;
 }
 
@@ -167,11 +168,10 @@ button {
 }
 
 .dialog__user-name {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .dialog__message {
-  font-size: 1.4rem;
   margin-top: 0.5rem;
 }
 
@@ -196,3 +196,66 @@ button {
   color: #1ea050;
   margin-right: 0.5rem;
 }
+
+.chat__header {
+  background-color: #497799;
+  color: #ffffff;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chat__detail {
+  padding: 0 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat__detail:hover {
+  background-color: #416a88;
+}
+
+.chat__name {
+  font-size: 1.5rem;
+}
+
+.chat__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.chat__top-btn {
+  height: 100%;
+  width: 5rem;
+}
+
+.chat__top-btn:hover {
+  background-color: #416a88;
+}
+

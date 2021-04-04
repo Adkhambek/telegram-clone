@@ -2,7 +2,8 @@
     &__header{
         background-color: $blue;
         color: $white;
-        padding: .7rem 1.5rem;
+        padding: 0 1.5rem;
+        height: 5rem;
         display: flex;
         align-items: center;
         .icon-menu{
@@ -57,7 +58,7 @@
 
     &__list{
         .active{
-            background-color: $light-blue;
+            background-color: lighten($blue, 10%);
             color: $white;
             .sender{
                 color: $white;
@@ -86,10 +87,9 @@
       margin-right: 1.5rem;
     }
     &__user-name{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     &__message{
-        font-size: 1.4rem;
         margin-top: 0.5rem;
         .sender{
             color: $blue;
