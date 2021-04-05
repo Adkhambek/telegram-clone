@@ -1,9 +1,10 @@
 .dialog{
+    height: 90vh;
     &__header{
         background-color: $blue;
         color: $white;
         padding: 0 1.5rem;
-        height: 5rem;
+        height: 10%;
         display: flex;
         align-items: center;
         .icon-menu{
@@ -19,14 +20,13 @@
     &__body{
         padding: 0 1.5rem;  
         position: relative;
-        max-height: 80vh;
+        height: 90%;
         overflow-y: auto; 
-        overflow-x: hidden;
         &::-webkit-scrollbar {
             width: 3px;
           } 
         &::-webkit-scrollbar-track {
-            background: $gray;        /* color of the tracking area */
+            background: dar $gray;        /* color of the tracking area */
           }
         &::-webkit-scrollbar-thumb {
             background-color: $blue;
