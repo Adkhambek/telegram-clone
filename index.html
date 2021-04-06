@@ -15,9 +15,56 @@
 
 <body>
     <div class="telegram">
+        <div class="overlay hidden"></div>
         <div class="dialog">
+            <div class="menu">
+                <header class="menu__header">
+                  <div class="menu__profile">
+                      <img src="./assets/images/placeholder/1.jpg" alt="avatar">
+                      <button>
+                          <span class="far fa-bookmark"></span>
+                      </button>
+                  </div>
+                  <div class="menu__profile-detail">
+                      <h2 class="menu__profile-name">Muzaffarov Adham</h2>
+                      <p class="menu__profile-tel">+998998000334</p>
+                  </div>
+                </header>  
+                <div class="menu__body">
+                  <ul class="menu__list">
+                      <li class="menu__item">
+                          <span class="fas fa-user-friends"></span>
+                          <p>New Group</p>
+                      </li>
+                      <li class="menu__item">
+                          <span class="fas fa-bullhorn" aria-hidden="true"></span>
+                          <p>New Channel</p>
+                      </li>
+                      <li class="menu__item">
+                          <span class="fas fa-user" aria-hidden="true"></span>
+                          <p>Contacts</p>
+                      </li>
+                      <li class="menu__item">
+                          <span class="fas fa-phone-alt" aria-hidden="true"></span>
+                          <p>Calls</p>
+                      </li>
+                      <li class="menu__item">
+                          <span class="fas fa-cog" aria-hidden="true"></span>
+                          <p>Settings</p>
+                      </li>
+                      <li class="menu__item">
+                          <span class="fas fa-moon"></span>
+                          <p>Night Mode</p>
+                      </li>
+                  </ul>
+                </div>
+                <footer class="menu__footer">
+                  <h2>Telegram Desktop</h2>
+                 <a href="#">Version 2.7.1</a> - <a href="#">About</a>
+                </footer>
+              </div>
             <header class="dialog__header">
-                <button class="dialog__menu">
+                <button class="dialog__menu-btn">
                     <span class="icon icon-menu"></span>
                 </button>
                 <p class="dialog__brand">Telegram</p>
@@ -170,6 +217,90 @@
         <div class="chat">
             <header class="chat__header">
                 <div class="chat__detail">
+                    <div class="profile">
+                        <header class="profile__header">
+                            <h1 class="profile__title">User Info</h1>
+                            <div class="profile__buttons">
+                                <button class="tel-btn">
+                                    <span class="fas fa-phone-alt"></span>
+                                </button>
+                                <button class="dropdown-btn">
+                                    <span class="fas fa-ellipsis-v"></span>
+                                </button>
+                                <button class="close-btn">
+                                    <span class="fas fa-times"></span>
+                                </button>
+                            </div>
+                        </header>
+                        <div class="profile__picture">
+                            <img src="./assets/images/placeholder/1.jpg" alt="" class="profile__avatar">
+                            <div class="profile__name">
+                                <h2>Muzaffarov Adhambek</h2>
+                                <p>last seen recently</p>
+                            </div>
+                        </div>
+                        <div class="profile__main">
+                            <ul class="profile__list">
+                                <li class="profile__item">
+                                    <span class="icon icon-bio"></span>
+                                    <div class="username__right">
+                                        <a href="#">@heaven_8</a>
+                                        <p>Username</p>
+                                    </div> 
+                                </li>
+                                <li class="profile__item">
+                                    <p>Add to contacts</p> 
+                                </li>
+                                <li class="profile__item">
+                                    <span class="icon icon-notification"></span>
+                                    <p>Notifications</p>
+                                </li>
+                                <li class="profile__item">
+                                    <p>Send message</p>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="profile__sources">
+                            <ul class="sources">
+                                <li class="source">
+                                    <span class="far fa-image"></span>
+                                    <p>8 photos</p>
+                                </li>
+                                <li class="source">
+                                    <span class="far fa-file"></span>
+                                    <p>5 files</p>
+                                </li>
+                                <li class="source">
+                                    <span class="fas fa-link"></span>
+                                    <p>2 share links</p>
+                                </li>
+                                <li class="source">
+                                    <span class="fas fa-microphone"></span>
+                                    <p>4 voice messeges</p>
+                                </li>
+                                <li class="source">
+                                    <span class="fas fa-user-alt"></span>
+                                    <p>2 groups in common</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <foooter class="profile__footer">
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <i class="fas fa-list"></i>
+                                    <p>Clear history</p>
+                                </li>
+                                <li class="footer-item">
+                                    <p>Delete chat</p>
+                                </li>
+                                <li class="footer-item">
+                                    <p>Block user</p>
+                                </li>
+                            </ul>
+                        </foooter>
+                    </div>
                     <h2 class="chat__name">Muzaffarov Adham</h2>
                     <p class="chat__seen">last seen recently</p>
                 </div>
@@ -179,6 +310,17 @@
                     </button>
                     <button class="chat__top-btn menu-bar">
                         <span class="icon icon-bar-white"></span>
+                        <div class="dropdown hidden">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">View profile</li>
+                                <li class="dropdown__item">Enable notifications</li>
+                                <li class="dropdown__item">Add to contact</li>
+                                <li class="dropdown__item">Export chat history</li>
+                                <li class="dropdown__item">Delate chat</li>
+                                <li class="dropdown__item">Clear history</li>
+                                <li class="dropdown__item">Block user</li>
+                            </ul>
+                        </div>
                     </button>
 
                 </div>
@@ -240,7 +382,24 @@
                             </div>
                         </div>
                     </li>
-                    
+                    <li class="chat__content me">
+                        <div class="chat__box">
+                            <p class="chat__text">Assalomu Alekum. Lorem ipsum dolor sit. Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet.</p>
+                            <div class="chat__box-right">
+                                <p class="time">12:12 AM</p>
+                                <span class="fas fa-check"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__content me">
+                        <div class="chat__box">
+                            <p class="chat__text">Am ipsum dolor sit. Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet.</p>
+                            <div class="chat__box-right">
+                                <p class="time">12:12 AM</p>
+                                <span class="fas fa-check"></span>
+                            </div>
+                        </div>
+                    </li>
                     
                     
                 </ul>
@@ -263,7 +422,7 @@
 
         </div>
     </div>
-<script src="./assets/js/textarea.js"></script>
+<script src="./assets/js/main.js"></script>
 </body>
 
 </html>
