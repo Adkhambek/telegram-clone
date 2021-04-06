@@ -46,9 +46,31 @@ menuBar.addEventListener('click', (e)=>{
 })
 
 window.document.addEventListener('click',()=>{
-    dropdown.classList.add('hidden');
+    dropdown.classList.add('hidden')
 })
 
+//Profile Modal: 
+
+const profile = document.querySelector('.profile')
+const chatDetail = document.querySelector('.chat__detail')
+const closeBtn = document.querySelector('.close-btn')
+const openProfile = function(){
+    profile.classList.remove('hidden')
+    overlay.classList.remove('hidden') 
+}
+const closeProfile = function(){
+    profile.classList.add('hidden')
+    overlay.classList.add('hidden') 
+} 
+
+chatDetail.addEventListener('click', openProfile)
+overlay.addEventListener('click', closeProfile)
+closeBtn.addEventListener('click', closeProfile)
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !chatDetail.classList.contains('hidden')) {
+      closeProfile();
+    }
+  });
 
 
 
