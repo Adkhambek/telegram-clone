@@ -1,4 +1,5 @@
 // For MenuBar
+
 const menuBtn = document.querySelector('.dialog__menu-btn')
 const menu = document.querySelector('.menu')
 const overlay = document.querySelector('.overlay')
@@ -68,9 +69,63 @@ overlay.addEventListener('click', closeProfile)
 closeBtn.addEventListener('click', closeProfile)
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !chatDetail.classList.contains('hidden')) {
-      closeProfile();
+      closeProfile()
     }
-  });
+  }); 
+
+  const textarea = document.querySelector('.chat__message-area')
+  const chatBody = document.querySelector('.chat__body')
+  const chatHeight = document.querySelector('.chat')
+  const defaultBodyHeight = chatBody.clientHeight
+  let arr = [];
+  defaultTextareaHeight = textarea.scrollHeight;
+  textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
+  chatBody.setAttribute("style", "height:" + (chatBody.clientHeight) + "px !important;")
+  textarea.addEventListener("input", ()=>{
+    if (!textarea.value.length) {
+        textarea.style.height = defaultTextareaHeight + "px"
+        chatBody.style.height = defaultBodyHeight + "px" 
+    }else{
+        textarea.style.height = "auto";
+        textarea.style.height = (textarea.scrollHeight) + "px"; 
+         if (!arr.includes(textarea.scrollHeight)) {
+                arr.push(textarea.scrollHeight)
+                if (arr[0] !== textarea.scrollHeight && arr[1] !== textarea.scrollHeight) {
+                    chatBody.style.height = defaultBodyHeight - arr[arr.length-1] + 2*defaultTextareaHeight + "px" 
+                }
+                }
+    }
+    
+        
+    
+    
+    }, false);
+
+  
+    
+ 
+  
+  
+
+
+// textarea: 
+// const textarea = document.querySelector('chat__message-area')
+
+// textarea.addEventListener('input', (e)=>{
+//     e.target.style.height = 'auto'
+//     e.target.style.height = (this.scrollHeight) + 'px'; 
+// }) 
+
+// const tx = document.getElementsByTagName("textarea");
+// for (let i = 0; i < tx.length; i++) {
+//   tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+//   tx[i].addEventListener("input", OnInput, false);
+// }
+
+// function OnInput() {
+//   this.style.height = "auto";
+//   this.style.height = (this.scrollHeight) + "px";
+// }
 
 
 

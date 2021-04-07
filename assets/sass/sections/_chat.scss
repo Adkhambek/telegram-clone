@@ -1,6 +1,10 @@
 .chat {
+    
     height: 90vh;
+    
+    
     &__header {
+        align-self: flex-start;
         background-color: $blue;
         color: $white;
         height: 10%;
@@ -143,28 +147,26 @@
     }
 
     &__footer {
+        padding: 0 1rem;
         min-height: 10%;
         display: flex;
-        align-items: center;
-        padding: 0 .5rem;
-    }
-    &__chat-file{
-        height: 100%;
-        width: 5rem;
+        align-items: flex-end;
+        button{
+            margin-bottom: .5rem;
+        }
     }
     &__text-form{
         width: 100%;
-        height: auto;
-    }
+        align-self: center;
+        }
     &__message-area{
         font-family: $font-family;
         font-size: 1.4rem;
         overflow: hidden;
         resize: none;
         outline: none;
-        width: 100%;
-        margin-top: .5rem;
         border: none;
+        width: 100%;
     }
    
 

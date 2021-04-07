@@ -347,6 +347,8 @@ button {
 }
 
 .chat__header {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   background-color: #497799;
   color: #ffffff;
   height: 10%;
@@ -548,24 +550,25 @@ button {
 }
 
 .chat__footer {
+  padding: 0 1rem;
   min-height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 .5rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.chat__chat-file {
-  height: 100%;
-  width: 5rem;
+.chat__footer button {
+  margin-bottom: .5rem;
 }
 
 .chat__text-form {
   width: 100%;
-  height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .chat__message-area {
@@ -574,9 +577,8 @@ button {
   overflow: hidden;
   resize: none;
   outline: none;
-  width: 100%;
-  margin-top: .5rem;
   border: none;
+  width: 100%;
 }
 
 .chat .profile {
