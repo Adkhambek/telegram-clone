@@ -1,6 +1,5 @@
 .chat {
-
-    height: 90vh;
+    height: 56rem;
     display: grid;
     grid-template-rows: 6rem auto 1fr;
 
@@ -77,8 +76,20 @@
 
     &__body {
         background-color: lighten($blue, 30%);
-        height: auto;
+        height: 50rem;
         overflow-y: auto;
+        position: relative;
+        .select-chat{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba($icon-color, $alpha: .3) ;
+            padding: .5rem 1rem;
+            border-radius: 3rem;
+
+        }
+        
 
         &::-webkit-scrollbar {
             width: 3px;

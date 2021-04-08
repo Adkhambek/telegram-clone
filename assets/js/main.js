@@ -1,5 +1,4 @@
 // For MenuBar
-
 const menuBtn = document.querySelector('.dialog__menu-btn')
 const menu = document.querySelector('.menu')
 const overlay = document.querySelector('.overlay')
@@ -73,13 +72,15 @@ document.addEventListener('keydown', function (e) {
     }
   }); 
 
+  //Send Form:
+
   const textarea = document.querySelector('.chat__message-area')
- 
   const recorder = document.querySelector('.chat__audio-recorder')
   const send = document.querySelector('.submit')
-  textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
   
   textarea.addEventListener("input", ()=>{
+      
+  textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
       recorder.classList.add('hidden')
       send.classList.remove('hidden')
     if (!textarea.value.length) {
@@ -89,38 +90,36 @@ document.addEventListener('keydown', function (e) {
     }else{
         textarea.style.height = "auto";
         textarea.style.height = (textarea.scrollHeight) + "px";
-    }
-    
-        
-    
-    
+    } 
     }, false);
 
+// Selecting Chat: 
+
+const chatBody = document.querySelector('.chat__body')
+const chatFooter = document.querySelector('.chat__footer')
+const chatList = document.querySelector('.chat__list')
+const selectChat = document.querySelector('.select-chat')
+const dialogItem = document.querySelectorAll('.dialog__item')
+const textArea = document.querySelector('.chat__message-area')
+
+
+dialogItem.forEach(value=>{
   
-    
- 
-  
-  
-
-
-// textarea: 
-// const textarea = document.querySelector('chat__message-area')
-
-// textarea.addEventListener('input', (e)=>{
-//     e.target.style.height = 'auto'
-//     e.target.style.height = (this.scrollHeight) + 'px'; 
-// }) 
-
-// const tx = document.getElementsByTagName("textarea");
-// for (let i = 0; i < tx.length; i++) {
-//   tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
-//   tx[i].addEventListener("input", OnInput, false);
-// }
-
-// function OnInput() {
-//   this.style.height = "auto";
-//   this.style.height = (this.scrollHeight) + "px";
-// }
+    value.addEventListener('click', ()=>{
+        for (const item of dialogItem) {
+            if (item.classList.contains('active')) {
+                 item.classList.remove('active') 
+            }
+        }
+        value.classList.add('active')
+        chatFooter.classList.remove('hidden')
+        chatList.classList.remove('hidden')
+        selectChat.classList.add('hidden')
+        chatBody.classList.add('height-auto') 
+        
+        })
+      
+})
 
 
 

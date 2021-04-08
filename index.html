@@ -77,7 +77,7 @@
                     </form>
                 </div>
                 <ul class="dialog__list">
-                    <li class="dialog__item active">
+                    <li class="dialog__item">
                         <img src="./assets/images/placeholder/2.jpg" alt="dialog avatar" class="dialog__avatar">
                         <div class="dialog__detail">
                             <h2 class="dialog__user-name">Muhammad Yunus</h2>
@@ -338,8 +338,11 @@
 
                 </div>
             </header>
+           
             <div class="chat__body">
-                <ul class="chat__list">
+                <p class="select-chat">Select a chat to start messaging</p> 
+                
+                <ul class="chat__list hidden">
                     <li class="chat__content">
                         <div class="chat__box">
                             <p class="chat__text">Assalomu Alekum. Lorem ipsum dolor sit. Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet.</p>
@@ -417,14 +420,15 @@
                     
                 </ul>
             </div>
-            <footer class="chat__footer">
+           
+            <footer class="chat__footer hidden">
                 <form class="chat__form">
                     <label class="file-label">
                         <span class="icon icon-file-upload" ></span>
                         <input type="file" name="file" class="file-input">
                     </label>
                 
-                    <textarea rows="1" name="text" class="chat__message-area" placeholder="Write a message..." autofocus></textarea>
+                    <textarea rows="1" name="text" class="chat__message-area" placeholder="Write a message..."></textarea>
                 
                     
                 <button class="chat__emoji">

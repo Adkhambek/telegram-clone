@@ -79,6 +79,10 @@ button {
   display: none !important;
 }
 
+.height-auto {
+  height: auto !important;
+}
+
 .outline {
   background-color: #ffffff !important;
   border: 2px solid #6191b4 !important;
@@ -101,7 +105,7 @@ button {
 }
 
 .dialog {
-  height: 90vh;
+  height: 560px;
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -345,7 +349,7 @@ button {
 }
 
 .chat {
-  height: 90vh;
+  height: 56rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 6rem auto 1fr;
@@ -441,9 +445,21 @@ button {
 
 .chat__body {
   background-color: #a6c1d5;
-  height: auto;
+  height: 50rem;
   overflow-y: auto;
+  position: relative;
   padding: 1rem;
+}
+
+.chat__body .select-chat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(140, 140, 140, 0.3);
+  padding: .5rem 1rem;
+  border-radius: 3rem;
 }
 
 .chat__body::-webkit-scrollbar {

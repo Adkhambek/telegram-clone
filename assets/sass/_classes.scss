@@ -18,6 +18,10 @@
   display: none !important;
 }
 
+.height-auto{
+  height: auto !important; 
+}
+
 .outline{
   background-color: $white !important;
   border: 2px solid lighten($blue, 10%) !important;
