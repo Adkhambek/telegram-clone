@@ -1,15 +1,17 @@
 .dialog{
     height: 90vh;
     position: relative;
+    display: grid;
+    grid-template-rows: 6rem auto;
     &__header{
         background-color: $blue;
         color: $white;
         padding: 0 1.5rem;
-        height: 10%;
         display: flex;
         align-items: center;
 
     }
+  
     &__brand{
         font-size: 1.4rem;
         margin-left: 1.5rem;
@@ -18,7 +20,6 @@
     &__body{
         padding: 0 1.5rem;  
         position: relative;
-        height: 90%;
         overflow-y: auto; 
         &::-webkit-scrollbar {
             width: 3px;

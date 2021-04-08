@@ -74,26 +74,18 @@ document.addEventListener('keydown', function (e) {
   }); 
 
   const textarea = document.querySelector('.chat__message-area')
-  const chatBody = document.querySelector('.chat__body')
-  const chatHeight = document.querySelector('.chat')
-  const defaultBodyHeight = chatBody.clientHeight
-  let arr = [];
-  defaultTextareaHeight = textarea.scrollHeight;
+ 
+ 
   textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
-  chatBody.setAttribute("style", "height:" + (chatBody.clientHeight) + "px !important;")
+  
   textarea.addEventListener("input", ()=>{
     if (!textarea.value.length) {
+        textarea.style.height = "auto";
         textarea.style.height = defaultTextareaHeight + "px"
-        chatBody.style.height = defaultBodyHeight + "px" 
+        
     }else{
         textarea.style.height = "auto";
-        textarea.style.height = (textarea.scrollHeight) + "px"; 
-         if (!arr.includes(textarea.scrollHeight)) {
-                arr.push(textarea.scrollHeight)
-                if (arr[0] !== textarea.scrollHeight && arr[1] !== textarea.scrollHeight) {
-                    chatBody.style.height = defaultBodyHeight - arr[arr.length-1] + 2*defaultTextareaHeight + "px" 
-                }
-                }
+        textarea.style.height = (textarea.scrollHeight) + "px";
     }
     
         
