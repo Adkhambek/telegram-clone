@@ -1,9 +1,9 @@
 .chat {
-    
+
     height: 90vh;
     display: grid;
     grid-template-rows: 6rem auto 1fr;
-    
+
     &__header {
         background-color: $blue;
         color: $white;
@@ -36,18 +36,21 @@
 
     &__top-btn {
         height: 100%;
-      
+
 
         &:hover {
             background-color: darken($blue, 5%);
         }
-        &.search{
-            width: 5rem;   
+
+        &.search {
+            width: 5rem;
         }
-        &.menu-bar{
+
+        &.menu-bar {
             position: relative;
             width: 5rem;
-            .dropdown{
+
+            .dropdown {
                 cursor: default;
                 width: 20rem;
                 transform: translateY(100%);
@@ -59,10 +62,12 @@
                 text-align: left;
                 padding: .5rem 0;
                 box-shadow: 1px 1px 5px darken($gray, 50%);
-                &__item{
+
+                &__item {
                     cursor: pointer;
                     padding: 1rem 2rem;
-                    &:hover{
+
+                    &:hover {
                         background-color: darken($gray, 10%);
                     }
                 }
@@ -74,18 +79,24 @@
         background-color: lighten($blue, 30%);
         height: auto;
         overflow-y: auto;
+
         &::-webkit-scrollbar {
             width: 3px;
-          } 
+        }
+
         &::-webkit-scrollbar-track {
-            background: dar $gray;        /* color of the tracking area */
-          }
+            background: dar $gray;
+            /* color of the tracking area */
+        }
+
         &::-webkit-scrollbar-thumb {
             background-color: $blue;
         }
+
         padding: 1rem;
     }
-    &__list{
+
+    &__list {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -94,25 +105,29 @@
     &__content {
         display: flex;
         align-items: flex-end;
-        &:not(:last-child){
+
+        &:not(:last-child) {
             margin-bottom: 2rem;
         }
-    
-       &.me{
-           display: flex;
-           justify-content: flex-start;
-           flex-direction: row-reverse;
-           .chat__box{
-               background-color: lighten($green, 70%);
-               &-right{
-                   color: $green;
-                   p{
-                       color: $green;
-                   }
-               }
-           }
-           
-       }
+
+        &.me {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+
+            .chat__box {
+                background-color: lighten($green, 70%);
+
+                &-right {
+                    color: $green;
+
+                    p {
+                        color: $green;
+                    }
+                }
+            }
+
+        }
     }
 
     &__profile-image {
@@ -121,12 +136,14 @@
         border-radius: 50%;
         margin-right: 1rem;
     }
-    &__box{
+
+    &__box {
         background-color: white;
         max-width: 60%;
         padding: 1.5rem;
         position: relative;
-        &-right{
+
+        &-right {
             display: inline-block;
             display: flex;
             align-items: center;
@@ -134,31 +151,49 @@
             position: absolute;
             right: 2%;
             bottom: 2%;
-            .time{
+
+            .time {
                 font-size: .9rem;
                 color: darken($gray, 30%)
             }
-            .fas{
+
+            .fas {
                 margin-left: .5rem;
                 font-size: .5rem;
             }
         }
     }
 
-    &__footer {
-        display: flex;
-        align-items: flex-end;
-    
-    }
-    button{
-        width: 6rem;
-        margin-bottom: 1rem;
-    }
-    &__text-form{
+&__form {
         width: 100%;
-        padding: 2rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        button {
+            width: 5rem;
+            height: 5rem;
+            align-self: flex-end;
         }
-    &__message-area{
+        .file-label{
+            width: 5rem;
+            height: 5rem;
+            cursor: pointer;
+            align-self: flex-end;
+            @include flex($align: center, $justify: center)
+
+        }
+        .file-input {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    &__message-area {
         font-family: $font-family;
         font-size: 1.4rem;
         overflow: hidden;
@@ -167,6 +202,6 @@
         border: none;
         width: 100%;
     }
-   
+
 
 }

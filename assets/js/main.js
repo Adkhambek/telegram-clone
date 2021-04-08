@@ -75,14 +75,17 @@ document.addEventListener('keydown', function (e) {
 
   const textarea = document.querySelector('.chat__message-area')
  
- 
+  const recorder = document.querySelector('.chat__audio-recorder')
+  const send = document.querySelector('.submit')
   textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
   
   textarea.addEventListener("input", ()=>{
+      recorder.classList.add('hidden')
+      send.classList.remove('hidden')
     if (!textarea.value.length) {
         textarea.style.height = "auto";
-        textarea.style.height = defaultTextareaHeight + "px"
-        
+        recorder.classList.remove('hidden')
+        send.classList.add('hidden')
     }else{
         textarea.style.height = "auto";
         textarea.style.height = (textarea.scrollHeight) + "px";

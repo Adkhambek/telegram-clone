@@ -418,12 +418,14 @@
                 </ul>
             </div>
             <footer class="chat__footer">
-                <button class="chat__file">
-                    <span class="icon icon-file-upload" ></span>
-                </button>
-                <form class="chat__text-form">
+                <form class="chat__form">
+                    <label class="file-label">
+                        <span class="icon icon-file-upload" ></span>
+                        <input type="file" name="file" class="file-input">
+                    </label>
+                
                     <textarea rows="1" name="text" class="chat__message-area" placeholder="Write a message..." autofocus></textarea>
-                </form>
+                
                     
                 <button class="chat__emoji">
                     <span class="icon icon-emoji" ></span>
@@ -431,6 +433,10 @@
                 <button class="chat__audio-recorder">
                     <span class="icon icon-audio-record" ></span>
                 </button>
+                <button class="submit hidden">
+                    <span class="icon icon-send" ></span>
+                </button>
+            </form>
             </footer>
 
         </div>
