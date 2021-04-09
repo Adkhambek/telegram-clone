@@ -457,7 +457,8 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: rgba(140, 140, 140, 0.3);
+  background-color: #899db5;
+  color: #ffffff;
   padding: .5rem 1rem;
   border-radius: 3rem;
 }

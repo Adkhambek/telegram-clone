@@ -94,7 +94,7 @@ document.addEventListener('keydown', function (e) {
     }, false);
 
 // Selecting Chat: 
-
+const chatRight = document.querySelector('.chat__right')
 const chatBody = document.querySelector('.chat__body')
 const chatFooter = document.querySelector('.chat__footer')
 const chatList = document.querySelector('.chat__list')
@@ -112,6 +112,8 @@ dialogItem.forEach(value=>{
             }
         }
         value.classList.add('active')
+        chatDetail.classList.remove('hidden')
+        chatRight.classList.remove('hidden')
         chatFooter.classList.remove('hidden')
         chatList.classList.remove('hidden')
         selectChat.classList.add('hidden')

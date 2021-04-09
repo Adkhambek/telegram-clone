@@ -84,7 +84,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba($icon-color, $alpha: .3) ;
+            background-color: darken($body-color, 30%);
+            color: $white;
             padding: .5rem 1rem;
             border-radius: 3rem;
 
