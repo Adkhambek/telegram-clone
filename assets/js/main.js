@@ -108,6 +108,8 @@ document.addEventListener('keydown', function (e) {
         recorder.classList.remove('hidden')
         send.classList.add('hidden')
     }else{
+        recorder.classList.add('hidden')
+        send.classList.remove('hidden')
         textarea.style.height = "auto";
         textarea.style.height = (textarea.scrollHeight) + "px";
     } 

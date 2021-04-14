@@ -217,6 +217,20 @@ if (!usersData) {
 
 chatForm.addEventListener('submit', e=>{
     e.preventDefault()
+    submitMessage()
+    e.target.reset();
+})
+
+formInput.addEventListener('keyup', e=>{
+    if(e.keyCode == 13) {
+        e.preventDefault()
+        submitMessage()
+        formInput.value = ""
+    } 
+})
+
+
+function submitMessage(){
     if (!formInput.value) return
     let time =  moment().format('LT');
     let selectedID = usersData.find(user => user.id == currentChatId)
@@ -236,10 +250,8 @@ chatForm.addEventListener('submit', e=>{
     chatList.textContent = ""
   for (let message of selectedID.messages) {
     newChatListItem(chatList, message.body, message.date, message.isMine)   
-  }   
-  
-  e.target.reset();
-})
+  }  
+}
 
 renderUser(usersData) 
 
@@ -327,6 +339,8 @@ function newChatListItem(parent, message, time, isMine) {
 function selectUserList(listItem, item) {
 
     listItem.addEventListener('click', () => {
+        recorder.classList.remove('hidden')
+        send.classList.add('hidden')
         chatName.textContent = item.name
         profileAvatar.src = './assets/images/placeholder/'+item.avatar
         profileName.textContent = item.name
