@@ -352,8 +352,8 @@ button {
   height: 56rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 6rem auto 1fr;
-      grid-template-rows: 6rem auto 1fr;
+  -ms-grid-rows: 6rem auto;
+      grid-template-rows: 6rem auto;
 }
 
 .chat__header {
@@ -445,7 +445,7 @@ button {
 
 .chat__body {
   background-color: #a6c1d5;
-  height: 50rem;
+  min-height: 43rem;
   overflow-y: auto;
   position: relative;
   padding: 1rem;
