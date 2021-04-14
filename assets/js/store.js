@@ -6,7 +6,7 @@ let dataArr = [{
         username: "Heaven_8",
         bio: "",
         messages: [{
-                body: "Assalomu alekum.qalesan o'rtoq yaxshimisan axvollarin yaxshimi axvollaarin yaxshimi",
+                body: "Assalomu alekum",
                 date: "12:15 AM",
                 isMine: false
             },
@@ -208,11 +208,14 @@ let inputValue = ""
 // LocalStorage 
 
 let data = localStorage.getItem('users')
-let usersData = JSON.parse(data)
 
-if (!usersData) {
+
+if (!data) {
     localStorage.setItem("users", JSON.stringify(dataArr))
-} 
+    window.location.reload();
+}
+    let usersData = JSON.parse(data)
+
 
 
 chatForm.addEventListener('submit', e=>{
@@ -221,12 +224,12 @@ chatForm.addEventListener('submit', e=>{
     e.target.reset();
 })
 
-formInput.addEventListener('keyup', e=>{
-    if(e.keyCode == 13) {
+formInput.addEventListener('keydown', e=>{
+    if(e.keyCode == 13 && !e.shiftKey) {
         e.preventDefault()
         submitMessage()
         formInput.value = ""
-    } 
+    }
 })
 
 
@@ -249,6 +252,7 @@ function submitMessage(){
     renderUser(usersData)
     chatList.textContent = ""
   for (let message of selectedID.messages) {
+      
     newChatListItem(chatList, message.body, message.date, message.isMine)   
   }  
 }
@@ -311,27 +315,26 @@ function newDealogElement(image, username, isMine, lastMessage, time, item) {
 function newChatListItem(parent, message, time, isMine) {
     const chatItem = document.createElement('li')
     chatItem.setAttribute('class', 'chat__content')
-    const divBox = document.createElement('div')
-    divBox.setAttribute('class', 'chat__box')
     const chatText = document.createElement('p')
     chatText.setAttribute('class', 'chat__text')
     chatText.textContent = message
     const boxRight = document.createElement('div')
-    boxRight.setAttribute('class', 'chat__box-right')
+    boxRight.setAttribute('class', 'chat__content-right')
     const mesgtime = document.createElement('time')
     mesgtime.setAttribute('class', 'time')
     mesgtime.textContent = time
     const fasCheck = document.createElement('span')
-    fasCheck.setAttribute('class', 'fas fa-check')
+    fasCheck.setAttribute('class', 'fas fa-check hidden')
 
     if (isMine) {
         chatItem.classList.add("me")
-        boxRight.appendChild(fasCheck)
+        fasCheck.classList.remove('hidden')
     }
-    chatItem.appendChild(divBox)
-    divBox.appendChild(chatText)
-    divBox.appendChild(boxRight)
+    // chatItem.appendChild(divBox)
+    chatItem.appendChild(chatText)
+    chatItem.appendChild(boxRight)
     boxRight.appendChild(mesgtime)
+    boxRight.appendChild(fasCheck)
     parent.appendChild(chatItem)
 }
 
