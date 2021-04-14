@@ -863,3 +863,224 @@ button {
 .chat .profile__footer .footer-item:last-child {
   color: red;
 }
+
+.settings {
+  cursor: default;
+  border-radius: .5rem;
+  background-color: #e7ebf0;
+  width: 35%;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  z-index: 10;
+  color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+}
+
+.settings span {
+  font-size: 2rem;
+  color: #8c8c8c;
+}
+
+.settings span.icon {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.settings__header {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings__title {
+  margin-left: 2rem;
+}
+
+.settings__buttons button {
+  padding: 2rem;
+}
+
+.settings__body {
+  overflow-y: scroll;
+}
+
+.settings__body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.settings__body::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+
+.settings__body::-webkit-scrollbar-thumb {
+  background-color: #a6a6a6;
+  border: 1px solid #F2F2F2;
+}
+
+.settings__picture {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.settings__avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.settings__name p {
+  font-size: .9rem;
+  color: #3a6d99;
+  margin-top: .5rem;
+}
+
+.settings__main {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.settings__item {
+  padding: 1rem 0;
+  cursor: pointer;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.settings__item:hover {
+  background-color: #F2F2F2;
+}
+
+.settings__item p {
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.settings__interface {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.settings__interface .default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.settings__interface .default p {
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.settings__interface .default span {
+  margin-left: .5rem;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.settings__interface .default:hover {
+  background-color: #F2F2F2;
+}
+
+.settings__interface .scale-list {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings__interface .scale-per {
+  cursor: pointer;
+  border-top: 4px solid #F2F2F2;
+  padding: .7rem;
+}
+
+.settings__interface .scale-per.active {
+  border-top: 4px solid #3a6d99;
+  color: #3a6d99;
+}
+
+.settings__footer {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.settings__footer .footer-item {
+  padding: 1rem 0rem;
+  cursor: pointer;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.settings__footer .footer-item:hover {
+  background-color: #F2F2F2;
+}
+
+.settings__footer .footer-item p {
+  margin-left: 6rem;
+}
+
+.settings__footer .footer-item:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.settings__footer .footer-item:first-child p {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
