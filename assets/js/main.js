@@ -15,6 +15,7 @@ const closeSettingsBtn = document.querySelector('.close-settings-btn')
 const textarea = document.querySelector('.chat__message-area')
 const recorder = document.querySelector('.chat__audio-recorder')
 const send = document.querySelector('.submit')
+const chat = document.querySelector('.chat')
 const chatRight = document.querySelector('.chat__right')
 const chatBody = document.querySelector('.chat__body')
 const chatFooter = document.querySelector('.chat__footer')
@@ -121,7 +122,7 @@ document.addEventListener('keydown', function (e) {
   }); 
 
   //Send Form:
-
+//   chatBody.classList.add('chatBody')
   textarea.addEventListener("input", ()=>{
       textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
       recorder.classList.add('hidden')

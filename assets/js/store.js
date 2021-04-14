@@ -225,6 +225,7 @@ chatForm.addEventListener('submit', e=>{
 })
 
 formInput.addEventListener('keydown', e=>{
+    
     if(e.keyCode == 13 && !e.shiftKey) {
         e.preventDefault()
         submitMessage()
@@ -344,6 +345,7 @@ function selectUserList(listItem, item) {
     listItem.addEventListener('click', () => {
         recorder.classList.remove('hidden')
         send.classList.add('hidden')
+        textarea.style = false;
         chatName.textContent = item.name
         profileAvatar.src = './assets/images/placeholder/'+item.avatar
         profileName.textContent = item.name

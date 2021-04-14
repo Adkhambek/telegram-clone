@@ -14,6 +14,23 @@
   z-index: 5;
 }
 
+.textareaScroll{
+  max-height: 57px;
+  overflow-y: auto;
+}
+
+.chatGrid {
+  grid-template-rows: 1fr 1fr 1fr !important;
+}
+
+.chatBody {
+  min-height: 0 !important;
+} 
+
+.textAreaReset {
+  height: auto !important;
+}
+
 .hidden {
   display: none !important;
 }
