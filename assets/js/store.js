@@ -217,23 +217,22 @@ if (!usersData) {
 
 chatForm.addEventListener('submit', e=>{
     e.preventDefault()
-    
+    let time =  moment().format('LT');
     let selectedID = usersData.find(user => user.id == currentChatId)
     let selectedIndex = usersData.findIndex(user => user.id == currentChatId)
     selectedID.messages.push(
         {
             body: formInput.value,
-            date: "12:12",
+            date: time,
             isMine: true 
         }
     )
    
     usersData[selectedIndex] = selectedID
     localStorage.setItem("users", JSON.stringify(usersData)) 
-    
-    
-    
-  chatList.textContent = "";
+    dialogList.textContent = ""
+    renderUser(usersData)
+    chatList.textContent = ""
   for (let message of selectedID.messages) {
     newChatListItem(chatList, message.body, message.date, message.isMine)   
   }   

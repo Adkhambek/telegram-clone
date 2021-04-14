@@ -34,7 +34,9 @@ const openMenu = function(){
 const closeMenu = function(){
     menu.classList.remove('show-menu')
     overlay.classList.add('hidden') 
-}
+} 
+
+
 
 menuBtn.addEventListener('click', openMenu)
 overlay.addEventListener('click', closeMenu)
