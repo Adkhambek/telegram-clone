@@ -347,7 +347,6 @@ function selectUserList(listItem, item) {
         userNameLink.textContent = "@"+item.username
         const allDialogItem = document.querySelectorAll('.dialog__item')
         currentChatId = item.id
-        console.log(currentChatId);
         let selectedObject = usersData.find(user => user.id == currentChatId)
         
         chatList.textContent = ""
