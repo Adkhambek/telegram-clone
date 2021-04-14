@@ -18,6 +18,12 @@ const chatFooter = document.querySelector('.chat__footer')
 const selectChat = document.querySelector('.select-chat')
 const dialogItem = document.querySelectorAll('.dialog__item')
 const textArea = document.querySelector('.chat__message-area')
+const chatName = document.querySelector('.chat__name')
+const profileAvatar = document.querySelector('.profile__avatar')
+const profileName= document.querySelector('.profile__full-name')
+const userNameLink = document.querySelector('.username-link')
+
+
 const openProfile = function(){
     profile.classList.remove('hidden')
     overlay.classList.remove('hidden') 

@@ -217,6 +217,7 @@ if (!usersData) {
 
 chatForm.addEventListener('submit', e=>{
     e.preventDefault()
+    if (!formInput.value) return
     let time =  moment().format('LT');
     let selectedID = usersData.find(user => user.id == currentChatId)
     let selectedIndex = usersData.findIndex(user => user.id == currentChatId)
@@ -246,7 +247,7 @@ renderUser(usersData)
 function renderUser(data) {
     for (let item of data) {
         let lastMessage = item.messages[item.messages.length - 1]
-        newDealogElement(item.avatar, item.name, lastMessage.isMine, lastMessage.body, lastMessage.date, item)
+        newDealogElement(item.avatar, item.name, lastMessage.isMine, truncate(lastMessage.body, 20), lastMessage.date, item)
     }
 }
 
@@ -326,6 +327,10 @@ function newChatListItem(parent, message, time, isMine) {
 function selectUserList(listItem, item) {
 
     listItem.addEventListener('click', () => {
+        chatName.textContent = item.name
+        profileAvatar.src = './assets/images/placeholder/'+item.avatar
+        profileName.textContent = item.name
+        userNameLink.textContent = "@"+item.username
         const allDialogItem = document.querySelectorAll('.dialog__item')
         currentChatId = item.id
         console.log(currentChatId);
@@ -357,6 +362,9 @@ function selectUserList(listItem, item) {
     
 }
 
+function truncate(str, n){
+    return (str.length > n) ? str.substr(0, n-1) + '...' : str;
+  };
 
 searchForm.addEventListener('submit', e => {
     e.preventDefault()
