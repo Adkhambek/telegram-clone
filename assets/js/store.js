@@ -385,12 +385,11 @@ searchForm.addEventListener('submit', e => {
 
 
 searchInput.addEventListener('input', e => {
-    dialogList.textContent = ""
-    if(!inputValue){
-        renderUser(usersData)
-    }
     inputValue = e.target.value;
-    
+    dialogList.textContent = ""
+    // if(!inputValue){
+    //     renderUser(usersData)
+    // }
     let searchResult = usersData.filter(value=>{
         return value.name.toLowerCase().includes(inputValue)
     })

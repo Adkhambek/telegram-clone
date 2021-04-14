@@ -7,8 +7,11 @@ const chatSearch = document.querySelector('.chat__top-btn.search')
 const menuBar = document.querySelector('.chat__top-btn.menu-bar')
 const dropdown = menuBar.querySelector('.dropdown')
 const profile = document.querySelector('.profile')
+const settings = document.querySelector('.settings')
 const chatDetail = document.querySelector('.chat__detail')
+const settingsBtn = document.querySelector('.settings-btn')
 const closeBtn = document.querySelector('.close-btn')
+const closeSettingsBtn = document.querySelector('.close-settings-btn')
 const textarea = document.querySelector('.chat__message-area')
 const recorder = document.querySelector('.chat__audio-recorder')
 const send = document.querySelector('.submit')
@@ -33,6 +36,15 @@ const closeProfile = function(){
     overlay.classList.add('hidden') 
 } 
 
+const openSettings = function(){
+    settings.classList.remove('hidden')
+    overlay.classList.remove('hidden') 
+}
+const closeSettings = function(){
+    settings.classList.add('hidden')
+    overlay.classList.add('hidden') 
+} 
+
 const openMenu = function(){
     menu.classList.add('show-menu')
     overlay.classList.remove('hidden') 
@@ -46,6 +58,7 @@ const closeMenu = function(){
 
 menuBtn.addEventListener('click', openMenu)
 overlay.addEventListener('click', closeMenu)
+settingsBtn.addEventListener('click', closeMenu)
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
       closeMenu();
@@ -80,6 +93,7 @@ window.document.addEventListener('click',()=>{
     dropdown.classList.add('hidden')
 })
 
+
 //Profile Modal: 
 
 
@@ -87,7 +101,18 @@ chatDetail.addEventListener('click', openProfile)
 
 overlay.addEventListener('click', closeProfile)
 
-closeBtn.addEventListener('click', closeProfile)
+closeBtn.addEventListener('click', closeProfile) 
+
+// Settings Modal: 
+
+settingsBtn.addEventListener('click', openSettings)
+
+overlay.addEventListener('click', closeSettings)
+
+closeSettingsBtn.addEventListener('click', closeSettings) 
+
+
+
 
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !chatDetail.classList.contains('hidden')) {
@@ -97,8 +122,6 @@ document.addEventListener('keydown', function (e) {
 
   //Send Form:
 
-  
-  
   textarea.addEventListener("input", ()=>{
       textarea.setAttribute("style", "height:" + (textarea.scrollHeight) + "px;");
       recorder.classList.add('hidden')
