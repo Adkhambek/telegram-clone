@@ -79,6 +79,7 @@
         min-height: 43rem;
         overflow-y: auto;
         position: relative;
+        padding: 1rem 3rem;
         .select-chat{
             position: absolute;
             top: 50%;
@@ -104,7 +105,7 @@
             background-color: $blue;
         }
 
-        padding: 1rem;
+        
     }
     
     &__list{
@@ -113,10 +114,11 @@
     }
     &__content {
         align-self: flex-start;
+        border-radius: 5px 5px 5px 0;
         @include flex(center, flex-start);
         background-color: white;
         padding: 0 1rem;
-        
+        position: relative;
         &-right
          {
             margin-left: 1rem;
@@ -135,6 +137,7 @@
         }
 
         &.me {
+            border-radius: 5px 5px 0 5px;
             align-self: flex-end;
             background-color: lighten($green, 60%);
             span, time{

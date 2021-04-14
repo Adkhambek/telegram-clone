@@ -75,18 +75,28 @@ button {
   z-index: 5;
 }
 
-.textareaScroll {
-  max-height: 57px;
-  overflow-y: auto;
+.triangle-right {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid #f3fdf7;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid transparent;
 }
 
-.chatGrid {
-  -ms-grid-rows: 1fr 1fr 1fr !important;
-      grid-template-rows: 1fr 1fr 1fr !important;
-}
-
-.chatBody {
-  min-height: 0 !important;
+.triangle-left {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid #ffffff;
+  border-top: 1rem solid transparent;
 }
 
 .textAreaReset {
@@ -466,7 +476,7 @@ button {
   min-height: 43rem;
   overflow-y: auto;
   position: relative;
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 
 .chat__body .select-chat {
@@ -507,6 +517,7 @@ button {
 .chat__content {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  border-radius: 5px 5px 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,6 +529,7 @@ button {
           justify-content: flex-start;
   background-color: white;
   padding: 0 1rem;
+  position: relative;
 }
 
 .chat__content-right {
@@ -537,6 +549,7 @@ button {
 }
 
 .chat__content.me {
+  border-radius: 5px 5px 0 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   background-color: #f3fdf7;

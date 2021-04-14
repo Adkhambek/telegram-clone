@@ -316,6 +316,10 @@ function newDealogElement(image, username, isMine, lastMessage, time, item) {
 function newChatListItem(parent, message, time, isMine) {
     const chatItem = document.createElement('li')
     chatItem.setAttribute('class', 'chat__content')
+    const triangleRight = document.createElement('span')
+    triangleRight.setAttribute('class', 'triangle-right hidden')
+    const triangleLeft = document.createElement('span')
+    triangleLeft.setAttribute('class', 'triangle-left')
     const chatText = document.createElement('p')
     chatText.setAttribute('class', 'chat__text')
     chatText.textContent = message
@@ -329,9 +333,13 @@ function newChatListItem(parent, message, time, isMine) {
 
     if (isMine) {
         chatItem.classList.add("me")
+        triangleLeft.classList.add("hidden")
         fasCheck.classList.remove('hidden')
+        triangleRight.classList.remove('hidden')
     }
     // chatItem.appendChild(divBox)
+    chatItem.appendChild(triangleRight)
+    chatItem.appendChild(triangleLeft)
     chatItem.appendChild(chatText)
     chatItem.appendChild(boxRight)
     boxRight.appendChild(mesgtime)

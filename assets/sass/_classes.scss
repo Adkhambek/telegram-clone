@@ -14,18 +14,29 @@
   z-index: 5;
 }
 
-.textareaScroll{
-  max-height: 57px;
-  overflow-y: auto;
+.triangle-right {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width         : 0;
+  height        : 0;
+  border-left   : 1rem solid lighten($green, 60%);
+  border-right  : 1rem solid transparent;
+  border-top: 1rem solid transparent;
 }
 
-.chatGrid {
-  grid-template-rows: 1fr 1fr 1fr !important;
+.triangle-left {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  width         : 0;
+  height        : 0;
+  border-left   : 1rem solid transparent;
+  border-right  : 1rem solid $white;
+  border-top: 1rem solid transparent;
 }
-
-.chatBody {
-  min-height: 0 !important;
-} 
 
 .textAreaReset {
   height: auto !important;
